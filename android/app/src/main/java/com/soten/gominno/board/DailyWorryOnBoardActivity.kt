@@ -1,31 +1,34 @@
-package com.soten.gominno
+package com.soten.gominno.board
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.DrawableRes
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
-import com.soten.gominno.databinding.ActivityOnBoardingBinding
+import com.soten.gominno.LoginActivity
+import com.soten.gominno.MainActivity
+import com.soten.gominno.R
+import com.soten.gominno.databinding.ActivityDailyWorryOnBoardBinding
 import com.soten.gominno.databinding.OnBoardingItemBinding
 import com.soten.utils.Interpolators
 
-class OnBoardingActivity : AppCompatActivity() {
+class DailyWorryOnBoardActivity : AppCompatActivity() {
 
-    private val binding by lazy { ActivityOnBoardingBinding.inflate(layoutInflater) }
+    private val binding by lazy { ActivityDailyWorryOnBoardBinding.inflate(layoutInflater) }
 
     private val callback = object : ViewPager2.OnPageChangeCallback() {
 
         override fun onPageSelected(position: Int) {
 
             val commentList = listOf(
-                "고민이 있으신가요?",
-                "해결사가 있습니다",
-                "바로 저요!"
+                "사소한 고민을 유저 끼리",
+                "간단한 커뮤니케이션",
+                "여기서 하세요"
             )
 
             binding.pagerDescription.run {
@@ -51,7 +54,7 @@ class OnBoardingActivity : AppCompatActivity() {
         binding.startButton.setOnClickListener {
 //            GlobalData.showOnBoarding = false // 보드 보여줄지 말지
             // TODO : 로그인 돼 있다면 바로 Main 으로
-            startActivity(Intent(this, LoginActivity::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
     }

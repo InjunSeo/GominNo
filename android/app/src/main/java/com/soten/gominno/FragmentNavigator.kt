@@ -12,7 +12,6 @@ class FragmentNavigator(
 ) {
 
     private val fragmentSavedStates = ArrayMap<String, Fragment.SavedState?>()
-//        arrayMapOf<String, Fragment.SavedState?>()
     private var lastScene: String? = null
 
     fun navigate(

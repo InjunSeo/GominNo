@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 
 class HomeViewModel : ViewModel() {
 
-    val assets = arrayOf(
+    private val assets = arrayOf(
         R.drawable.on_boarding_01,
         R.drawable.on_boarding_02,
         R.drawable.splash

@@ -3,7 +3,6 @@ package com.soten.utils
 import android.view.animation.Interpolator
 import androidx.core.view.animation.PathInterpolatorCompat
 
-// https://easings.net/
 object Interpolators {
 
     val EASE_IN_SINE by cubicBezier(0.47f, 0f, 0.745f, 0.715f)

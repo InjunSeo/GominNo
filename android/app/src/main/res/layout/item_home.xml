@@ -17,19 +17,19 @@
         android:text="고민이 있어요~"
         android:textColor="?colorOnSurface"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@id/new_badge"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/new_badge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@id/title"
-        app:layout_constraintRight_toLeftOf="@id/more"
-        app:layout_constraintTop_toTopOf="@id/title"
-        tools:visibility="visible" />
+<!--    <ImageView-->
+<!--        android:id="@+id/new_badge"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:visibility="gone"-->
+<!--        app:layout_constraintBottom_toBottomOf="@id/title"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@id/title"-->
+<!--        tools:visibility="visible" />-->
 
     <TextView
         android:id="@+id/description"
@@ -37,26 +37,27 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
         android:ellipsize="end"
         android:maxLines="2"
         android:text="나만의 지니는 어디 있을까? 누가 나의 고민을 들어줄까? 제 고민을 들어주실 지니님 계신가요?? 해결해주세요 ㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠ"
         android:textColor="?colorOnSurface"
         app:layout_constraintBottom_toBottomOf="@id/guideline"
-        app:layout_constraintEnd_toStartOf="@id/more"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/title" />
 
-    <ImageView
-        android:id="@+id/more"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:background="?selectableItemBackgroundBorderless"
-        android:scaleType="centerInside"
-        app:layout_constraintBottom_toBottomOf="@id/guideline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/selector_more" />
+    <!--    <ImageView-->
+    <!--        android:id="@+id/more"-->
+    <!--        android:layout_width="48dp"-->
+    <!--        android:layout_height="48dp"-->
+    <!--        android:background="?selectableItemBackgroundBorderless"-->
+    <!--        android:scaleType="centerInside"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@id/guideline"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:srcCompat="@drawable/selector_more" />-->
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -65,21 +66,21 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="80dp" />
 
-    <ImageView
-        android:id="@+id/thumbnail_image"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_margin="16dp"
-        android:scaleType="centerCrop"
-        android:transitionName="transition_name_photo"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintDimensionRatio="V,2:1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/guideline"
-        tools:src="@tools:sample/avatars"
-        tools:visibility="visible" />
+<!--    <ImageView-->
+<!--        android:id="@+id/thumbnail_image"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_margin="16dp"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        android:transitionName="transition_name_photo"-->
+<!--        android:visibility="gone"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintDimensionRatio="V,2:1"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/guideline"-->
+<!--        tools:src="@tools:sample/avatars"-->
+<!--        tools:visibility="visible" />-->
 
     <View
         android:id="@+id/divider"

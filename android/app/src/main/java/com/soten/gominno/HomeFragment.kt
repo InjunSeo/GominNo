@@ -8,7 +8,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
@@ -62,6 +61,10 @@ class HomeFragment: Fragment(R.layout.fragment_home) {
                 adapter.submitList(it.items)
             })
             appBar.addOnOffsetChangedListener(listener)
+        }
+
+        binding.fab.setOnClickListener {
+            Toast.makeText(context, "구현해야합니다~", Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -132,17 +135,17 @@ class HomeFragment: Fragment(R.layout.fragment_home) {
             binding.root.setOnClickListener {
                 onItemClick(binding, bindingAdapterPosition)
             }
-            binding.more.setOnClickListener {
-                onMoreClick(bindingAdapterPosition)
-            }
+//            binding.more.setOnClickListener {
+//                onMoreClick(bindingAdapterPosition)
+//            }
         }
 
         fun bind(uiModel: HomeItemUiModel, expanded: Boolean) {
-            binding.thumbnailImage.setImageResource(uiModel.resId)
+//            binding.thumbnailImage.setImageResource(uiModel.resId)
 
             TransitionManager.beginDelayedTransition(binding.root)
             binding.root.isActivated = expanded
-            binding.thumbnailImage.isVisible = expanded
+//            binding.thumbnailImage.isVisible = expanded
         }
     }
 

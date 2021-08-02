@@ -21,6 +21,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+        bindViews(savedInstanceState)
+    }
+
+    private fun bindViews(savedInstanceState: Bundle?) {
         MobileAds.initialize(this) {}
 
         mAdView = binding.adView

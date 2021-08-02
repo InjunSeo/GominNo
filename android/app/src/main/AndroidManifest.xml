@@ -9,21 +9,20 @@
         android:roundIcon="@drawable/splash"
         android:supportsRtl="true"
         android:theme="@style/Theme.GominNo">
-        <activity android:name=".OnBoardingActivity"></activity>
+        <activity android:name=".board.DailyWorryOnBoardActivity"></activity>
+        <activity android:name=".ui.ContentSelectActivity" />
+        <activity android:name=".board.AppStartOnBoardingActivity" />
         <activity android:name=".LoginActivity" />
         <activity
             android:name=".SplashActivity"
             android:theme="@style/SplashTheme">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity" />
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
