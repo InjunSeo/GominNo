@@ -1,78 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".LoginActivity">
 
-    <EditText
-        android:id="@+id/inputEmailEditText"
-        android:layout_marginTop="100dp"
-        android:hint="이메일을 입력해주세요"
-        android:paddingStart="15dp"
-        android:layout_marginHorizontal="16dp"
+    <ImageView
+        android:id="@+id/topImageView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="0dp"
+        android:background="@drawable/test_circle"
+        app:layout_constraintBottom_toBottomOf="@id/topImageGuideLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/loginCommentTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="70dp"
+        android:text="당신 주변의 고민, \n 하나하나까지"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/topImageGuideLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topImageGuideLine"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.33" />
+
+    <TextView
+        android:id="@+id/loginTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:text="로그인"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topImageGuideLine" />
+
+    <EditText
+        android:id="@+id/inputIdEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/input_edit_text"
+        android:elevation="4dp"
+        android:hint="아이디 또는 이메일을 입력해주세요"
+        android:paddingVertical="10dp"
+        android:paddingStart="20dp"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginTextView" />
 
     <EditText
         android:id="@+id/inputPasswordEditText"
-        android:layout_marginTop="30dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/input_edit_text"
+        android:elevation="4dp"
         android:hint="비밀번호를 입력해주세요"
-        android:paddingStart="15dp"
-        android:layout_marginHorizontal="16dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:paddingVertical="10dp"
+        android:paddingStart="20dp"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputIdEditText" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/loginButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="100dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/login_button"
+        android:text="로그인 하기"
+        android:elevation="4dp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputPasswordEditText" />
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:id="@+id/commentLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
         android:orientation="horizontal"
-        android:layout_height="wrap_content">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginButton">
 
-        <Button
-            android:text="회원가입"
-            android:layout_marginStart="16dp"
-            android:layout_weight="1"
-            android:layout_marginEnd="16dp"
+        <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="계정을 잊으셨나요? "
+            android:textColor="@color/black" />
 
-        <Button
-            android:id="@+id/loginButton"
+        <TextView
             android:layout_width="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginEnd="16dp"
-            android:text="로그인"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="이메일 찾기 "
+            android:textColor="#0099FF" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="또는 "
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="비밀번호 찾기"
+            android:textColor="#0099FF" />
     </LinearLayout>
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:background="@color/black"
-        android:layout_marginTop="100dp"
-        android:layout_marginHorizontal="16dp"
-        android:layout_height="50dp" />
+    <TextView
+        android:id="@+id/comment1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="54dp"
+        android:text="회원이 아니신가요?"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/commentLayout" />
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:background="@color/black"
-        android:layout_marginTop="20dp"
-        android:layout_marginHorizontal="16dp"
-        android:layout_height="50dp" />
+    <LinearLayout
+        android:id="@+id/commentLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/comment1">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:background="@color/black"
-        android:layout_marginTop="20dp"
-        android:layout_marginHorizontal="16dp"
-        android:layout_height="50dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SNS로 자동 로그인 하기 "
+            android:textColor="#0099FF" />
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:background="@color/black"
-        android:layout_marginTop="20dp"
-        android:layout_marginHorizontal="16dp"
-        android:layout_height="50dp" />
-</LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="또는 "
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="회원가입"
+            android:textColor="#0099FF" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

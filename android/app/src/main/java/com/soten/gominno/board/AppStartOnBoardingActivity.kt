@@ -10,6 +10,7 @@ import androidx.annotation.DrawableRes
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
+import com.soten.gominno.GlobalData
 import com.soten.gominno.LoginActivity
 import com.soten.gominno.R
 import com.soten.gominno.databinding.ActivityOnBoardingBinding
@@ -51,7 +52,7 @@ class AppStartOnBoardingActivity : AppCompatActivity() {
             binding.viewPager2.currentItem += 1
         }
         binding.startButton.setOnClickListener {
-//            GlobalData.showOnBoarding = false // 보드 보여줄지 말지
+            GlobalData.showOnBoarding = true // 보드 보여줄지 말지
             // TODO : 로그인 돼 있다면 바로 Main 으로
             startActivity(Intent(this, LoginActivity::class.java))
             finish()

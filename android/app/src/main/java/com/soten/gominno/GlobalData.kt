@@ -2,7 +2,7 @@ package com.soten.gominno
 
 object GlobalData {
 
-    var startAppBoard = false
-    var dailyBoard = false
+    var showOnBoarding = false
+    var showOnDailyBoard = false
 
 }

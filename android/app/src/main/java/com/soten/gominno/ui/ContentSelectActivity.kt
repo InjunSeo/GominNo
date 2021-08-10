@@ -9,11 +9,10 @@ import com.soten.gominno.databinding.ActivityContentSelectBinding
 
 class ContentSelectActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityContentSelectBinding
+    private val binding by lazy { ActivityContentSelectBinding.inflate(layoutInflater) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityContentSelectBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         bindViews()
