@@ -5,7 +5,7 @@
     android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ui.MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar"
@@ -49,8 +49,6 @@
             app:spanCount="3"
             tools:itemCount="20"
             tools:listitem="@layout/item_home" />
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -58,7 +56,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
-        app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_baseline_create_24"
+        android:backgroundTint="#6116FF"
+        app:tint="@color/white"
+        app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

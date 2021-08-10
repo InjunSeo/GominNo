@@ -11,7 +11,7 @@ import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.soten.gominno.GlobalData
-import com.soten.gominno.LoginActivity
+import com.soten.gominno.ui.LoginActivity
 import com.soten.gominno.R
 import com.soten.gominno.databinding.ActivityOnBoardingBinding
 import com.soten.gominno.databinding.OnBoardingItemBinding

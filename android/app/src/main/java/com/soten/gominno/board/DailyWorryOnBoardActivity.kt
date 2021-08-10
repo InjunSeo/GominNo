@@ -10,8 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
-import com.soten.gominno.LoginActivity
-import com.soten.gominno.MainActivity
+import com.soten.gominno.ui.MainActivity
 import com.soten.gominno.R
 import com.soten.gominno.databinding.ActivityDailyWorryOnBoardBinding
 import com.soten.gominno.databinding.OnBoardingItemBinding
