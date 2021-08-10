@@ -45,7 +45,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:spanCount="3"
             tools:itemCount="20"
             tools:listitem="@layout/item_home" />

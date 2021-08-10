@@ -4,6 +4,8 @@ import androidx.annotation.DrawableRes
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 
 class HomeViewModel : ViewModel() {
 
@@ -17,19 +19,31 @@ class HomeViewModel : ViewModel() {
     val uiModel: LiveData<HomeUiModel>
         get() = _uiModel
 
+
     init {
         _uiModel.postValue(HomeUiModel((1..30).map {
-            HomeItemUiModel(resId = assets.random(), isNew = it == 1)
+            TestEntity(resId = assets.random(), isNew = false)
         }))
     }
+
+
 }
 
 data class HomeUiModel(
-    val items: List<HomeItemUiModel> = emptyList()
+    val items: List<TestEntity> = emptyList()
 )
 
-data class HomeItemUiModel(
+data class TestEntity(
     @DrawableRes
     val resId: Int,
     val isNew: Boolean
 )
+
+@Entity
+data class HomeItemUiModel(
+    @PrimaryKey(autoGenerate = true)
+    val id: Int?,
+    var title: String,
+    var description: String
+)
+

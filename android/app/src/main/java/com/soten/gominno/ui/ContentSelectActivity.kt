@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.soten.gominno.GlobalData
 import com.soten.gominno.board.DailyWorryOnBoardActivity
 import com.soten.gominno.databinding.ActivityContentSelectBinding
 
@@ -20,10 +21,17 @@ class ContentSelectActivity : AppCompatActivity() {
 
     private fun bindViews() {
         binding.dailyWorryImageView.setOnClickListener {
-            startActivity(
-                Intent(this, DailyWorryOnBoardActivity::class.java)
-            )
-            finish()
+            if (GlobalData.showOnDailyBoard.not()) {
+                startActivity(
+                    Intent(this, DailyWorryOnBoardActivity::class.java)
+                )
+                finish()
+            } else {
+                startActivity(
+                    Intent(this, MainActivity::class.java)
+                )
+                finish()
+            }
         }
 
         binding.professionalView.setOnClickListener {

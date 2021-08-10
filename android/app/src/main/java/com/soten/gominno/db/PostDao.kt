@@ -1,17 +1,15 @@
 package com.soten.gominno.db
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
+import com.soten.gominno.HomeItemUiModel
 
 @Dao
 interface PostDao {
 
-    @Query("SELECT * FROM PostEntity")
-    fun getAllPost(): List<PostEntity>
+    @Query("SELECT * FROM HomeItemUiModel")
+    fun getAllPost(): List<HomeItemUiModel>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insert(postEntity: PostEntity)
+    fun insert(postEntity: HomeItemUiModel)
 
 }
