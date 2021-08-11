@@ -52,8 +52,7 @@ class AppStartOnBoardingActivity : AppCompatActivity() {
             binding.viewPager2.currentItem += 1
         }
         binding.startButton.setOnClickListener {
-            GlobalData.showOnBoarding = true // 보드 보여줄지 말지
-            // TODO : 로그인 돼 있다면 바로 Main 으로
+            GlobalData.showOnBoarding = true
             startActivity(Intent(this, LoginActivity::class.java))
             finish()
         }

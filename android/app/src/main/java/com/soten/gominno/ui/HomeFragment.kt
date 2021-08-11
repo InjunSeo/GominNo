@@ -57,7 +57,7 @@ class HomeFragment: Fragment(R.layout.fragment_home) {
             }
             header.icon.setOnClickListener {
                 if (isTop) {
-                    Toast.makeText(it.context, "SearchActivity 구현 해야함", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(it.context, "TODO : Search", Toast.LENGTH_SHORT).show()
                 } else {
                     appBar.setExpanded(true, true)
                     recyclerView.smoothScrollToPosition(0)
@@ -72,9 +72,6 @@ class HomeFragment: Fragment(R.layout.fragment_home) {
             recyclerView.adapter = adapter
 
 
-            viewModel.uiModel.observe(viewLifecycleOwner) {
-
-            }
             showPostList()
 
             fab.setOnClickListener {
@@ -100,15 +97,6 @@ class HomeFragment: Fragment(R.layout.fragment_home) {
         }.start()
     }
 
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        activity?.onBackPressedDispatcher?.addCallback(this, object : OnBackPressedCallback(true) {
-            override fun handleOnBackPressed() {
-                FinishFragment().show(parentFragmentManager, "finish")
-            }
-        })
-    }
-
     override fun onResume() {
         super.onResume()
         binding.appBar.addOnOffsetChangedListener(listener)
@@ -121,7 +109,7 @@ class HomeFragment: Fragment(R.layout.fragment_home) {
     }
 
     private fun Activity.navigateToDetail(uiModel: HomeItemUiModel) {
-        val intent = Intent(this, LoginActivity::class.java) // TODO : 디테일 구현
+        val intent = Intent(this, LoginActivity::class.java)
         intent.putExtra("resId", uiModel.title)
         startActivity(intent)
     }

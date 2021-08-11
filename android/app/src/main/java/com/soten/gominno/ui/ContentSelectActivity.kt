@@ -25,17 +25,20 @@ class ContentSelectActivity : AppCompatActivity() {
                 startActivity(
                     Intent(this, DailyWorryOnBoardActivity::class.java)
                 )
-                finish()
+                GlobalData.showOnDailyBoard = true
             } else {
                 startActivity(
-                    Intent(this, MainActivity::class.java)
+                    Intent(this, AgeSelectActivity::class.java)
                 )
-                finish()
             }
         }
 
         binding.professionalView.setOnClickListener {
             Toast.makeText(this, "추후 오픈 예정입니다!!", Toast.LENGTH_SHORT).show()
         }
+    }
+
+    override fun onBackPressed() {
+        FinishFragment().show(supportFragmentManager, "finish")
     }
 }

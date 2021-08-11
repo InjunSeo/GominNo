@@ -10,10 +10,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
+import com.soten.gominno.GlobalData
 import com.soten.gominno.ui.MainActivity
 import com.soten.gominno.R
 import com.soten.gominno.databinding.ActivityDailyWorryOnBoardBinding
 import com.soten.gominno.databinding.OnBoardingItemBinding
+import com.soten.gominno.ui.AgeSelectActivity
 import com.soten.utils.Interpolators
 
 class DailyWorryOnBoardActivity : AppCompatActivity() {
@@ -25,8 +27,8 @@ class DailyWorryOnBoardActivity : AppCompatActivity() {
         override fun onPageSelected(position: Int) {
 
             val commentList = listOf(
-                "사소한 고민을 유저 끼리",
-                "간단한 커뮤니케이션",
+                "연령대를 고르세요!",
+                "고민을 해결하여 램프를 얻으세요!",
                 "여기서 하세요"
             )
 
@@ -51,9 +53,8 @@ class DailyWorryOnBoardActivity : AppCompatActivity() {
             binding.viewPager2.currentItem += 1
         }
         binding.startButton.setOnClickListener {
-//            GlobalData.showOnBoarding = false // 보드 보여줄지 말지
-            // TODO : 로그인 돼 있다면 바로 Main 으로
-            startActivity(Intent(this, MainActivity::class.java))
+            GlobalData.showOnBoarding = false // 보드 보여줄지 말지
+            startActivity(Intent(this, AgeSelectActivity::class.java))
             finish()
         }
     }

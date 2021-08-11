@@ -6,10 +6,12 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_genie_app"
         android:label="생활속지니"
-        android:roundIcon="@drawable/splash"
+        android:roundIcon="@drawable/ic_genie_app"
         android:supportsRtl="true"
         android:theme="@style/Theme.GominNo">
-        <activity android:name=".ui.PostingActivity"></activity>
+        <activity android:name=".ui.SignUpActivity"></activity>
+        <activity android:name=".ui.AgeSelectActivity" />
+        <activity android:name=".ui.PostingActivity" />
         <activity android:name=".board.DailyWorryOnBoardActivity" />
         <activity android:name=".ui.ContentSelectActivity" />
         <activity android:name=".board.AppStartOnBoardingActivity" />
@@ -25,7 +27,7 @@
         </activity>
         <activity
             android:name=".ui.MainActivity"
-            android:theme="@style/Theme.Main"></activity>
+            android:theme="@style/Theme.Main" />
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
