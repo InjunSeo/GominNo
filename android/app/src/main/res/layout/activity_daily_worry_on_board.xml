@@ -6,6 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".board.AppStartOnBoardingActivity">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/board_page_container"
+        app:layout_constraintBottom_toBottomOf="@id/containerGuideLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/containerGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="549dp" />
+
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pager2"
         android:layout_width="0dp"
@@ -41,16 +57,13 @@
         android:id="@+id/pager_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
         android:text="OnBoarding Description"
-        android:textColor="@android:color/darker_gray"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/pager_indicator"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/white"
+        android:textSize="25sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/contentBarrier" />
-
+        app:layout_constraintTop_toTopOf="parent" />
     <LinearLayout
         android:id="@+id/pager_indicator"
         android:layout_width="wrap_content"
@@ -59,7 +72,7 @@
         app:layout_constraintBottom_toTopOf="@+id/button_barrier"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/pager_description">
+        app:layout_constraintTop_toBottomOf="@id/containerGuideLine">
 
         <View
             android:id="@+id/pager_indicator_01"
