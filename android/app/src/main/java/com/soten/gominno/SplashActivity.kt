@@ -11,6 +11,7 @@ import com.soten.gominno.ui.ContentSelectActivity
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_splash)
 
         Handler(Looper.getMainLooper()).postDelayed({
             if (GlobalData.showOnBoarding.not()) {
@@ -20,6 +21,6 @@ class SplashActivity : AppCompatActivity() {
                 startActivity(Intent(this, ContentSelectActivity::class.java))
                 finish()
             }
-        }, 1000)
+        }, 3000L)
     }
 }

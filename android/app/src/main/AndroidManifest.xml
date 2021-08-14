@@ -9,7 +9,7 @@
         android:roundIcon="@drawable/ic_genie_app"
         android:supportsRtl="true"
         android:theme="@style/Theme.GominNo">
-        <activity android:name=".ui.SignUpActivity"></activity>
+        <activity android:name=".ui.SignUpActivity" />
         <activity android:name=".ui.AgeSelectActivity" />
         <activity android:name=".ui.PostingActivity" />
         <activity android:name=".board.DailyWorryOnBoardActivity" />
@@ -17,8 +17,7 @@
         <activity android:name=".board.AppStartOnBoardingActivity" />
         <activity android:name=".ui.LoginActivity" />
         <activity
-            android:name=".SplashActivity"
-            android:theme="@style/SplashTheme">
+            android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

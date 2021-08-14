@@ -27,7 +27,6 @@ class LoginActivity : AppCompatActivity() {
 
         binding.signUpTextView.setOnClickListener {
             startActivity(Intent(this, SignUpActivity::class.java))
-            finish()
         }
     }
 
