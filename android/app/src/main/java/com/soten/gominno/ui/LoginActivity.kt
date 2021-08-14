@@ -30,4 +30,8 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+    override fun onBackPressed() {
+        FinishFragment().show(supportFragmentManager, "finish")
+    }
+
 }
